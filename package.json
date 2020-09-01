@@ -1,0 +1,29 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "My Portofolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./public/scss/main.scss ./public/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sidiki-del/portofolio.git"
+  },
+  "author": "Sidiki Issa Diarra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sidiki-del/portofolio/issues"
+  },
+  "homepage": "https://github.com/Sidiki-del/portofolio#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11",
+    "request": "^2.88.2",
+    "sass": "^1.26.10"
+  }
+}
