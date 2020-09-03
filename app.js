@@ -43,6 +43,10 @@ app.get("/services", function (req, res) {
     res.render("services");
 });
 
+app.get("/elements", function (req, res) {
+    res.render("elements");
+});
+
 
 
 
@@ -70,7 +74,6 @@ app.post("/contact", function (req, res) {
     <h3>Informations Du Contact</h3>
     <ul>
         <li>Prénom : ${req.body.name}</li>
-        <li>Nom : ${req.body.last}</li>
         <li>Email : ${req.body.email}</li>
         <li>Subject : ${req.body.subject}</li>
     </ul>
@@ -113,56 +116,58 @@ app.post("/contact", function (req, res) {
 
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-        // res.render('pricing');
+        res.render('index');
     }
 
-    main().catch(console.error);
-
-    // // Mailchimp Area
-    // const {
-    //   mail
-    // } = req.body;
-
-    // if (!mail) {
-    //   res.redirect('about');
-    //   return; 
-    // }
-
-    // const data = {
-    //   members: [{
-    //     email_address: mail,
-    //     status: 'subscribed'
-
-    //   }]
-    // }
-
-    // const postData = JSON.stringify(data);
-
-    // const options = {
-    //   url: 'https://us10.api.mailchimp.com/3.0/lists/27134ea02d',
-    //   method: 'POST',
-    //   headers: {
-    //     Authorization: 'auth 5a6a7bafba2ff3508b55711f3e0d79f6-us10',
-    //   },
-    //   body: postData
-    // };
-
-    // // request(options, function (err, response, body) {
-    // //   if (err) {
-    // //     res.redirect('fail');
-    // //   } else {
-    // //     if (response.statusCode === 200) {
-    // //       res.redirect('success');
-    // //     } else {
-
-    // //       res.redirect("about");
-
-    // //     }
-    // //   }
-    // // });
+    main().catch(console.error);    
 
 });
 
+// Mailchimp Area
+app.post("/mailchimp", function (req, res) {
+
+    const {
+        mail
+    } = req.body;
+
+    if (!mail) {
+        res.redirect('about');
+        return;
+    }
+
+    const data = {
+        members: [{
+            email_address: mail,
+            status: 'subscribed'
+
+        }]
+    }
+
+    const postData = JSON.stringify(data);
+
+    const options = {
+        url: 'https://us10.api.mailchimp.com/3.0/lists/27134ea02d',
+        method: 'POST',
+        headers: {
+            Authorization: 'auth 5a6a7bafba2ff3508b55711f3e0d79f6-us10',
+        },
+        body: postData
+    };
+
+    request(options, function (err, response, body) {
+        if (err) {
+            res.redirect('about');
+        } else {
+            if (response.statusCode === 200) {
+                res.redirect('portfolio');
+            } else {
+
+                res.redirect("about");
+
+            }
+        }
+    });
+});
 
 
 

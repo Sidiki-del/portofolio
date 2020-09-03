@@ -134,7 +134,7 @@
     /*----------------------------------------------------*/
 	function gallery_isotope(){
         if ( $('.gallery_f_inner').length ){
-            // Activate isotope in container
+            // Activate isotope in container 
 			$(".gallery_f_inner").imagesLoaded( function() {
                 $(".gallery_f_inner").isotope({
                     layoutMode: 'fitRows',
