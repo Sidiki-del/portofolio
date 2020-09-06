@@ -127,10 +127,10 @@ app.post("/contact", function (req, res) {
 app.post("/mailchimp", function (req, res) {
 
     const {
-        mail
+        mail, fullName
     } = req.body;
 
-    if (!mail) {
+    if (!mail || ! fullName) {
         res.redirect('about');
         return;
     }
@@ -138,13 +138,17 @@ app.post("/mailchimp", function (req, res) {
     const data = {
         members: [{
             email_address: mail,
-            status: 'subscribed'
+            status: 'subscribed',
+             merge_fields: {
+               FNAME: fullName
+             //   LNAME: lastName
+             }
 
         }]
     }
 
     const postData = JSON.stringify(data);
-
+ 
     const options = {
         url: 'https://us10.api.mailchimp.com/3.0/lists/27134ea02d',
         method: 'POST',

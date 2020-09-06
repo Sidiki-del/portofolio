@@ -11,6 +11,7 @@
         padding: 0px;
         border: 0px;
         border-radius: 0px;
+        
         .nav{
             .nav-item{
 				margin-right: 45px;
@@ -132,7 +133,7 @@
 			top: -70px;
 			left: 0;
 			right: 0;
-			background: #000;  
+			background: black;
 			transform: translateY(70px);
 			transition: transform 500ms ease, background 500ms ease;
 			-webkit-transition: transform 500ms ease, background 500ms ease;

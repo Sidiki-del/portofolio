@@ -92,8 +92,10 @@
     .info_item{
         position: relative;
         padding-left: 45px;
+
         i{
             position: absolute;
+            padding: 10px 0;
             left: 0;
             top: 0;
             font-size: 20px;
@@ -107,7 +109,8 @@
             color: $rob;
             font-weight: bold;
             margin-bottom: 0px;
-			color: $dip;
+            color: $dip;
+            padding: 12px 0px;
             a{
                 color: $dip;
             }

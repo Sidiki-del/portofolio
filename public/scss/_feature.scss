@@ -25,7 +25,7 @@
 	p{
 		max-width: 495px;
 		font-family: $rob;
-		margin-bottom: 40px;
+		margin-bottom: 15px;
 	}
 }
 .wel_item{
@@ -135,7 +135,7 @@
 	.tab-content{
 		.tab-pane{
 			.list{
-				max-width: 460px;
+				max-width: 800px;
 				margin: auto;
 				position: relative;
 				padding-top: 40px;
@@ -180,23 +180,29 @@
 					}
 					.media{
 						.d-flex{
-							padding-right: 100px;
+							padding-right: 300px;
+
 							p{
 								color: rgba(255, 255, 255, .75);
 								margin-bottom: 0px;
 								padding-top: 20px;
+								padding-left: 100px
 							}
 						}
 						.media-body{
+							
 							h4{
 								color: #fff;
-								font-size: 21px;
+								font-size: 14px;
 								text-transform: uppercase;
 								margin-bottom: 20px;
+								
 							}
 							p{
 								color: rgba(255, 255, 255, .75);
 								margin-bottom: 0px;
+								font-size: 12px;
+								
 							}
 						}
 					}
