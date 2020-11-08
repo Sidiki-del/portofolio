@@ -15,6 +15,7 @@
 		font-weight: bold;
 		font-family: $hee;
 		margin-bottom: 0px;
+		text-decoration: underline;
 	}
 }
 .ab_widget{
@@ -48,6 +49,7 @@
 			border-radius: 0px;
 			width: 80%;
 			border: none;
+			
 			padding: 0px 15px;
 			border: 1px solid #1e233b;
 			font-size: 14px;
@@ -61,6 +63,7 @@
 				font-weight: normal;
 				color: #cccccc;
 			}
+			margin-top: 10px;
 		}
 		.sub-btn{
 			border-radius: 0px;
@@ -74,7 +77,10 @@
 			width: 42px;
 			cursor: pointer;
 			color: #fff;
+			height: 40px;
+			margin-top: 10px;
 		}
+		
 	}
 }
 .social_widget{
@@ -87,11 +93,13 @@
 	}
 	.list{
 		li{
-			margin-right: 17px;
+			// margin-right: 17px;
+			// margin-bottom: 17px;
+			margin: 10px 17px 13px 0px ;
 			display: inline-block;
 			a{
 				color: #cccccc;
-				font-size: 14px;
+				font-size: 25px;
 				@include transition;
 			}
 			&:last-child{
