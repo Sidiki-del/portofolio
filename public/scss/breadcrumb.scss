@@ -18,7 +18,7 @@
 	}
 	.banner_inner{
 		position: relative;
-		width: 100%;
+		width: 100%; 
 		min-height: 700px;
 		display: flex;
 //		.overlay{
@@ -48,8 +48,14 @@
 					}
 				}
 				.media-body{
+					
 					vertical-align: middle;
 					align-self: center;
+					.personal_test{
+						li {
+							font-size: 10px;
+						}
+					}
 				}
 			}
 		}

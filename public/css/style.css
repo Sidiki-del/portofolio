@@ -397,6 +397,9 @@ button:focus {
   vertical-align: middle;
   align-self: center;
 }
+.home_banner_area .banner_inner .banner_content .media .media-body .personal_test li {
+  font-size: 10px;
+}
 
 .blog_banner {
   min-height: 780px;
@@ -3020,7 +3023,7 @@ h6 {
   text-transform: uppercase;
 }
 .welcome_text p {
-  max-width: 510px;
+  max-width: 495px;
   font-family: "Roboto", sans-serif;
   margin-bottom: 15px;
 }
@@ -3228,25 +3231,21 @@ h6 {
   border-radius: 10px;
   transition: all 300ms linear 0s;
   background: #fff;
+  margin: auto;
   margin-bottom: 30px;
 }
-.feature_item i {
-  margin-bottom: 35px;
-  display: block;
-}
-.feature_item i:before {
-  margin-left: 0px;
-  font-size: 60px;
-  color: #e1e1e1;
-  line-height: 60px;
+.feature_item img {
+  width: 200px;
+  height: 100px;
 }
 .feature_item h4 {
   color: #222222;
-  font-size: 21px;
+  font-size: 18px;
   font-family: "Heebo", sans-serif;
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 .feature_item p {
   margin-bottom: 0px;

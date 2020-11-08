@@ -116,7 +116,7 @@
 			margin-right: 8px;
 			a{
 				margin: 0px;
-				line-height: 50px;
+				line-height: 50px; 
 				border-radius: 5px;
 				padding: 0px 40px;
 				font-size: 13px;
@@ -239,33 +239,41 @@
 }
 .feature_inner{
 	margin-bottom: -30px;
+	
 }
 .feature_item{
 	padding: 50px 35px;
 	border-radius: 10px;
 	@include transition;
 	background: #fff;
+	margin: auto;
+
 	margin-bottom: 30px;
-	i{
-		margin-bottom: 35px;
-		display: block;
-		&:before{
-			margin-left: 0px;
-			font-size: 60px;
-			color: #e1e1e1;
-			line-height: 60px;
-		}
+	img{
+		// margin-bottom: 35px;
+		// display: block;
+		width: 200px;
+		height: 100px;
+		
+		// &:before{
+		// 	margin-left: 0px;
+		// 	font-size: 60px;
+		// 	color: blue;
+		// 	line-height: 60px;
+		// }
 	}
 	h4{
 		color: $dip;
-		font-size: 21px;
+		font-size: 18px;
 		font-family: $hee;
 		font-weight: bold;
 		margin-bottom: 20px;
 		text-transform: uppercase;
+		text-align: center;
 	}
 	p{
 		margin-bottom: 0px;
+		
 	}
 	.main_btn{
 		padding: 0px 30px;

@@ -8,7 +8,7 @@ const nodemailer = require("nodemailer");
 const {
     response
 } = require("express");
-
+ 
 
 
 const app = express();
@@ -62,9 +62,15 @@ app.get("/fail", function (req, res) {
 app.get("/mailchimp", function (req, res) {
     res.render("mailchimp");
 });
-app.get("/success", function (req, res) {
-    res.render("success");
+app.get("/successmes", function (req, res) {
+    res.render("successmes");
 });
+
+app.get("/successmail", function (req, res) {
+    res.render("successmail");
+});
+
+
 
 // Contact Route
 app.post("/contact", function (req, res) {
@@ -116,7 +122,7 @@ app.post("/contact", function (req, res) {
 
         console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
-        res.render('index');
+        res.render('successmes');
     }
 
     main().catch(console.error);    
@@ -131,7 +137,7 @@ app.post("/mailchimp", function (req, res) {
     } = req.body;
 
     if (!mail || ! fullName) {
-        res.redirect('about');
+        res.redirect('fail');
         return;
     }
 
@@ -160,13 +166,13 @@ app.post("/mailchimp", function (req, res) {
 
     request(options, function (err, response, body) {
         if (err) {
-            res.redirect('about');
+            res.redirect('fail');
         } else {
             if (response.statusCode === 200) {
-                res.redirect('portfolio');
+                res.redirect('successmail');
             } else {
 
-                res.redirect("about");
+                res.redirect("fail");
 
             }
         }
@@ -187,7 +193,7 @@ app.post("/mailchimp", function (req, res) {
 
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, function () {
     console.log("Server is running on port " + "" + PORT);
